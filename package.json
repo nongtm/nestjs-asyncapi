@@ -82,7 +82,7 @@
   },
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.build.json",
-    "prepare": "husky install",
+    "prepare": "husky install && npm run build",
     "format": "prettier --write \"lib/**/*.{js,ts,json}\"  \"e2e/**/*.{js,ts,json}\"",
     "lint": "eslint --fix \"lib/**/*.{js,ts}\"  \"sample/**/*.{js,ts}\" \"test/**/*.{js,ts}\"",
     "pre-commit": "lint-staged",
